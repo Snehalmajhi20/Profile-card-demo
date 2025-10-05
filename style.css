@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+nav ul {
+    display: flex;
+    align-items:center;
+    list-style: none;
+    gap: 10px;
+    /* padding: 10px; */
+}
+
+#meimage{
+    width: 100px;
+}
+.card{
+    width: 550px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+#cardimage{
+    width: 550px;
+    height: 150px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+.card p{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    font-size: 1.4rem;
+}
+.music{
+    width: 500px;
+    height: 70px;
+    background-color: #b5c6e0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+a{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.profile{
+    background: #08203e;
+    width: 500px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#letter{
+    font-size: 1.1rem;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
