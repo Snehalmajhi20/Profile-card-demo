@@ -5,7 +5,7 @@
 }
 .container{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
     display: flex;
     align-items: center;
