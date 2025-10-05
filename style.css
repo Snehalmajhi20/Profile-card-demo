@@ -1,85 +1,191 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.container{
-    width: 100vw;
-    height: 100%;
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-nav ul {
-    display: flex;
-    align-items:center;
-    list-style: none;
-    gap: 10px;
-    /* padding: 10px; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#meimage{
-    width: 100px;
+body {
+  font-family: 'Poppins', sans-serif;
 }
-.card{
-    width: 550px;
-    height: 500px;
-    border-radius: 20px;
-    background-color: white;
-    display: flex;
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Navbar */
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#meimage {
+  width: 100px;
+}
+
+/* Card */
+.card {
+  width: 550px;
+  height: auto;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  padding-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+#cardimage {
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+}
+
+.card h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.card p {
+  text-align: center;
+  margin: 5px;
+  font-size: 1.3rem;
+}
+
+.music {
+  width: 90%;
+  height: auto;
+  background-color: #b5c6e0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 0 auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.music img {
+  width: 50px;
+  height: 50px;
+}
+
+.music a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.profile {
+  background: #08203e;
+  width: 90%;
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.profile a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+footer {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#letter {
+  font-size: 1rem;
+}
+
+/* For Tablets (768px and below) */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+
+  .card h2 {
+    font-size: 1.7rem;
+  }
+
+  .card p {
+    font-size: 1.2rem;
+  }
+
+  .music {
     flex-direction: column;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .music a {
+    margin-left: 0;
+    margin-top: 5px;
+  }
 }
-#cardimage{
-    width: 550px;
-    height: 150px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+
+/* For Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  #meimage {
+    width: 60px;
+  }
+
+  .card {
+    width: 95%;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .music img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .music a {
+    font-size: 0.9rem;
+  }
+
+  .profile a {
+    font-size: 0.9rem;
+  }
+
+  #letter {
+    font-size: 0.8rem;
+  }
 }
-.card h2{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    font-size: 2rem;
-}
-.card p{
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-    font-size: 1.4rem;
-}
-.music{
-    width: 500px;
-    height: 70px;
-    background-color: #b5c6e0;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-a{
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-}
-.profile{
-    background: #08203e;
-    width: 500px;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-#letter{
-    font-size: 1.1rem;
-}
-footer{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
+
+/* For Large Laptops / Desktops (1200px and above) */
+@media (min-width: 1200px) {
+  .card {
+    width: 600px;
+  }
 }
